@@ -67,7 +67,11 @@
     #npm i typescript
     #npm install typescript -g (had to install as an admin/Power shell)
     #tsc --init
-
+    Cleaner install in Mac
+         #npm install typescript -g
+         #tsc -v
+            Ramons-MacBook-Pro:Angular ramon$ tsc -v
+            Version 5.5.3
 </TypeScript>
 </Notes>
 <versioning history>
