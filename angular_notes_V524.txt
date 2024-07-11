@@ -1,0 +1,64 @@
+<Subject>
+<Conventions>
+    In this document as a convention all commands to input
+        in the CLI starts with '#' e.g. #cd $HOME, #cd ~
+        CLI command:
+            #<command>
+</Conventions>
+
+<911 commands>
+============
+- 
+</911 commands>
+
+
+<Misc>
+====
+-
+</Misc>
+
+<Links Readings & Ref. Material>
+================================
+-HTML docs : 
+	https://www.w3schools.com/html/html_forms_attributes.asp
+</Links Readings & Ref. Material>
+
+
+
+<Notes>
+-Upgrade Node.js 
+     brew upgrade node
+    installs nvm (Node Version Manager)
+    #curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+    download and install Node.js (you may need to restart the terminal)
+    #nvm install 20
+    verifies the right Node.js version is in the environment
+    #node -v # should print `v20.15.1`
+    Verifies the right NPM version is in the environment
+    #npm -v # should print `10.7.0`
+    Latest installed on 7/10/2024
+    >Ramons-MacBook-Pro:Angular ramon$ node -v
+    v20.15.1
+    >Ramons-MacBook-Pro:Angular ramon$ npm -v
+    10.7.0
+
+-Upgrade Python to 3.12 in MacBook
+    Ramons-MacBook-Pro:Angular ramon$ which -a python3.12
+    /usr/local/bin/python3.12
+    Ramons-MacBook-Pro:Angular ramon$ ls -alF /usr/local/bin/python3.12
+    lrwxr-xr-x  1 ramon  admin  43 Jul 10 18:45 /usr/local/bin/python3.12@ -> ../Cellar/python@3.12/3.12.4/bin/python3.12
+    Ramons-MacBook-Pro:Angular ramon$ python3.12 --version
+    Python 3.12.4
+    
+</Notes>
+<versioning history>
+v. 1/30/2014
+2:20 PM 6/29/2017
+2:34 PM 6/30/2017
+11:09 AM 4/10/2018
+12:50 PM 4/24/2018
+01:02 PM 4/25/2018
+2:01 PM 5/18/2018
+
+</versioning history>
+</Subject>
