@@ -26,6 +26,7 @@
 
 
 <Notes>
+<Mac>
 -Upgrade Node.js 
      brew upgrade node
     installs nvm (Node Version Manager)
@@ -49,16 +50,27 @@
     lrwxr-xr-x  1 ramon  admin  43 Jul 10 18:45 /usr/local/bin/python3.12@ -> ../Cellar/python@3.12/3.12.4/bin/python3.12
     Ramons-MacBook-Pro:Angular ramon$ python3.12 --version
     Python 3.12.4
-    
+</Mac>
+<Windows>
+    https://nodejs.org/en
+    LSV Latest stable version at July 10th 2024
+        PS C:\Users\rcastillo\Documents\DocsMisc\src\Angular> node -v
+        v20.15.1 
+    PS C:\Users\rcastillo\Documents\DocsMisc\src\Angular> npm -v
+        10.7.0
+</Windows>
+<TypeScript>
+    TypeScript - TS
+    install TS
+        To create package.json
+        #npm init
+    #npm i typescript
+    #npm install typescript -g (had to install as an admin/Power shell)
+    #tsc --init
+
+</TypeScript>
 </Notes>
 <versioning history>
-v. 1/30/2014
-2:20 PM 6/29/2017
-2:34 PM 6/30/2017
-11:09 AM 4/10/2018
-12:50 PM 4/24/2018
-01:02 PM 4/25/2018
-2:01 PM 5/18/2018
-
+    7.10.2024 starts
 </versioning history>
 </Subject>
