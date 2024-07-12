@@ -73,6 +73,9 @@
             Ramons-MacBook-Pro:Angular ramon$ tsc -v
             Version 5.5.3
 </TypeScript>
+<Angular>
+
+</Angular>
 </Notes>
 <versioning history>
     7.10.2024 starts
