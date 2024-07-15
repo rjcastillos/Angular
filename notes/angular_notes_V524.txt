@@ -100,7 +100,17 @@
     Create a new project
     position in the desired directory
     #ng new [projectname]
+*How to add a component (simple one)
+    under ./app
+        create a files
+            1) {name}.component.ts
+                ex. => header.component.ts
+                -import component from core  
+                -add decorator and in the template or templateUrl call 
+                    or write the markup
+            2) 
 </Angular>
+
 <vscode>
     Recommended extentions
         Angular Language Service (angular.io)
