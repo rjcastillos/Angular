@@ -26,6 +26,7 @@
 
 
 <Notes>
+<install>
 <Mac>
 -Upgrade Node.js 
      brew upgrade node
@@ -74,8 +75,33 @@
             Version 5.5.3
 </TypeScript>
 <Angular>
+<Windows>
+    Power Shell set 
+        PS C:\Users\rcastillo> Get-ExecutionPolicy
+        Restricted
+        PS C:\Users\rcastillo> Get-ExecutionPolicy -Scope CurrentUser
+        Undefined
+        PS C:\Users\rcastillo> Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
+        PS C:\Users\rcastillo> Get-ExecutionPolicy -Scope CurrentUser
+    npm install -g @angular/cli
 
+</Windows>
+<Mac>
+    sudo npm install -g @angular/cli
+</Mac>
+    Create a new project
+    position in the desired directory
+    #ng new [projectname]
 </Angular>
+<vscode>
+    Recommended extentions
+        Angular Language Service (angular.io)
+        Angular Essentials (John Papa)
+</vscode>
+-How to start the development server
+    #npm start
+        If you just installed angular , open a new Powershell
+</install>
 </Notes>
 <versioning history>
     7.10.2024 starts
