@@ -21,6 +21,14 @@
 ================================
 -HTML docs : 
 	https://www.w3schools.com/html/html_forms_attributes.asp
+
+-Angular Material
+    https://material.angular.io/guide/theming
+-Storage context
+    https://firebase.google.com/docs/firestore/client/libraries
+    
+-Google search
+    https://developers.google.com/search/docs/fundamentals/how-search-works#:~:text=Google%20Search%20is%20a%20fully,to%20add%20to%20our%20index.
 </Links Readings & Ref. Material>
 
 
