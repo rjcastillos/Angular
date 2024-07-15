@@ -100,15 +100,38 @@
     Create a new project
     position in the desired directory
     #ng new [projectname]
-*How to add a component (simple one)
+*How to add new components (simple one)
     under ./app
-        create a files
+        create files:
             1) {name}.component.ts
                 ex. => header.component.ts
                 -import component from core  
                 -add decorator and in the template or templateUrl call 
                     or write the markup
-            2) 
+            2) {name}.component.html
+        from main.ts
+            1)import { {Name}Component } from './app/{name}.component';
+            2)bootstrapApplication({Name}Component)
+    Add in ../index.html
+        <body>
+             <{name}-{component}-></{name}-{component}>
+        </body> 
+*How to add new components (under Angular Frame Work)
+    The idea is to make App a top level and use the new files from this level
+    so instead of calling the components from imdex.html ,  to invoke these
+    1) from app.component.html
+        Add
+        <body>
+            <{name}-{component}-></{name}-{component}>
+        ex. <app-header></app-header>
+        </body>
+    2)Add to app.component.ts the new components files by:
+        -import component from core 
+            ex. import { HeaderComponent } from './header.component'; 
+        - add the import in decorator
+            ex. imports: [HeaderComponent],
+    3) as the import and bootstrapApplication are inserted in the app.component
+        we dont need those lines in main.ts
 </Angular>
 
 <vscode>
