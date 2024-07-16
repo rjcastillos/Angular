@@ -130,7 +130,7 @@
             ex. import { HeaderComponent } from './header.component'; 
         - add the import in decorator
             ex. imports: [HeaderComponent],
-    3) as the import and bootstrapApplication are inserted in the app.component
+    3) as the imports and bootstrapApplication are inserted in the app.component.ts
         we dont need those lines in main.ts
 </Angular>
 
@@ -139,9 +139,13 @@
         Angular Language Service (angular.io)
         Angular Essentials (John Papa)
 </vscode>
--How to start the development server
+*How to start the development server
+    -binding localhost
     #npm start
         If you just installed angular , open a new Powershell
+    -binding IP 
+    #ng serve --host 0.0.0.0
+
 </install>
 </Notes>
 <versioning history>
