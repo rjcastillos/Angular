@@ -97,10 +97,10 @@
 <Mac>
     sudo npm install -g @angular/cli
 </Mac>
-    Create a new project
+*How to Create a new project
     position in the desired directory
     #ng new [projectname]
-*How to add new components (simple one)
+*How to manually add new components (simple one)
     under ./app
         create files:
             1) {name}.component.ts
@@ -116,7 +116,7 @@
         <body>
              <{name}-{component}-></{name}-{component}>
         </body> 
-*How to add new components (under Angular Frame Work)
+*How to manually add new components (under Angular Frame Work)
     The idea is to make App a top level and use the new files from this level
     so instead of calling the components from imdex.html ,  to invoke these
     1) from app.component.html
@@ -132,6 +132,26 @@
             ex. imports: [HeaderComponent],
     3) as the imports and bootstrapApplication are inserted in the app.component.ts
         we dont need those lines in main.ts
+        *How to automatically (using ng) generate new components
+    #ng generate component {name} {path}
+    #ng g c {name} {path} 
+    ex. #ng g c user 
+        by default the above command creates the files in ./src/app/user/
+        files :
+                CREATE src/app/user/user.component.html (20 bytes)
+                CREATE src/app/user/user.component.spec.ts (601 bytes)
+                CREATE src/app/user/user.component.ts (238 bytes)
+                CREATE src/app/user/user.component.css (0 bytes)
+- Dynamic content (lesson 20):
+    1)  Define a method/property inside the component's class:
+            To make dynamic text rendering from a Jason file add a property  in the component .ts file as below
+            to the class ,and access it accordingly from the component .html file.
+    2)  Binding html template:
+            2.1) String interpolation
+                    double curly brackets
+                        {{ method in the clas with param.object}}
+                        ex. <span>{{ selectedUser.name}}</span> 
+    
 </Angular>
 
 <vscode>
@@ -145,6 +165,7 @@
         If you just installed angular , open a new Powershell
     -binding IP 
     #ng serve --host 0.0.0.0
+    we can change the 'start' command in the scrpit contained in package.json
 
 </install>
 </Notes>
