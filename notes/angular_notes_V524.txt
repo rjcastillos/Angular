@@ -31,6 +31,11 @@
     https://developers.google.com/search/docs/fundamentals/how-search-works#:~:text=Google%20Search%20is%20a%20fully,to%20add%20to%20our%20index.
 </Links Readings & Ref. Material>
 
+-Property Binding and (HTML Attribbutes vs DOM properties)
+    https://jakearchibald.com/2024/attributes-vs-properties/
+
+
+
 
 
 <Notes>
@@ -142,15 +147,28 @@
                 CREATE src/app/user/user.component.spec.ts (601 bytes)
                 CREATE src/app/user/user.component.ts (238 bytes)
                 CREATE src/app/user/user.component.css (0 bytes)
-- Dynamic content (lesson 20):
-    1)  Define a method/property inside the component's class:
+- Dynamic content (lesson 20 and above):
+    1)  Define a property inside the component's class:
             To make dynamic text rendering from a Jason file add a property  in the component .ts file as below
             to the class ,and access it accordingly from the component .html file.
     2)  Binding html template:
             2.1) String interpolation
-                    double curly brackets
+                    double curly brackets inside a tag
                         {{ method in the clas with param.object}}
-                        ex. <span>{{ selectedUser.name}}</span> 
+                        ex. <span>{{ selectedUser.name}}</span>
+            2.2)Property Binding:
+                    2.2.1)Inside the template wrapping in the .html file the property in square brackets []
+                        ex. <img [src]="'assets/' + selectedUser.avatar"/>
+                    2.2.2)Defining a getter whitin the class in the component .ts file
+                        Declare a get method in the class 
+                            to be binded in the HTML
+                            ex. whitin user.component.ts 
+                            get imagePath()
+                                {
+                                    return 'assets/users/' + this.selectedUser.avatar;
+                                }
+                             and within the .html
+                                [src]="imagePath"
     
 </Angular>
 
