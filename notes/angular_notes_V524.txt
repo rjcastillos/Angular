@@ -101,6 +101,9 @@
 </Windows>
 <Mac>
     sudo npm install -g @angular/cli
+    then 
+    npm install 
+        to install the ng dev environment
 </Mac>
 *How to Create a new project
     position in the desired directory
