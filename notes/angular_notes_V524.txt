@@ -31,6 +31,11 @@
     https://developers.google.com/search/docs/fundamentals/how-search-works#:~:text=Google%20Search%20is%20a%20fully,to%20add%20to%20our%20index.
 </Links Readings & Ref. Material>
 
+-Property Binding and (HTML Attribbutes vs DOM properties)
+    https://jakearchibald.com/2024/attributes-vs-properties/
+
+
+
 
 
 <Notes>
@@ -97,18 +102,89 @@
 <Mac>
     sudo npm install -g @angular/cli
 </Mac>
-    Create a new project
+*How to Create a new project
     position in the desired directory
     #ng new [projectname]
+*How to manually add new components (simple one)
+    under ./app
+        create files:
+            1) {name}.component.ts
+                ex. => header.component.ts
+                -import component from core  
+                -add decorator and in the template or templateUrl call 
+                    or write the markup
+            2) {name}.component.html
+        from main.ts
+            1)import { {Name}Component } from './app/{name}.component';
+            2)bootstrapApplication({Name}Component)
+    Add in ../index.html
+        <body>
+             <{name}-{component}-></{name}-{component}>
+        </body> 
+*How to manually add new components (under Angular Frame Work)
+    The idea is to make App a top level and use the new files from this level
+    so instead of calling the components from imdex.html ,  to invoke these
+    1) from app.component.html
+        Add
+        <body>
+            <{name}-{component}-></{name}-{component}>
+        ex. <app-header></app-header>
+        </body>
+    2)Add to app.component.ts the new components files by:
+        -import component from core 
+            ex. import { HeaderComponent } from './header.component'; 
+        - add the import in decorator
+            ex. imports: [HeaderComponent],
+    3) as the imports and bootstrapApplication are inserted in the app.component.ts
+        we dont need those lines in main.ts
+        *How to automatically (using ng) generate new components
+    #ng generate component {name} {path}
+    #ng g c {name} {path} 
+    ex. #ng g c user 
+        by default the above command creates the files in ./src/app/user/
+        files :
+                CREATE src/app/user/user.component.html (20 bytes)
+                CREATE src/app/user/user.component.spec.ts (601 bytes)
+                CREATE src/app/user/user.component.ts (238 bytes)
+                CREATE src/app/user/user.component.css (0 bytes)
+- Dynamic content (lesson 20 and above):
+    1)  Define a property inside the component's class:
+            To make dynamic text rendering from a Jason file add a property  in the component .ts file as below
+            to the class ,and access it accordingly from the component .html file.
+    2)  Binding html template:
+            2.1) String interpolation
+                    double curly brackets inside a tag
+                        {{ method in the clas with param.object}}
+                        ex. <span>{{ selectedUser.name}}</span>
+            2.2)Property Binding:
+                    2.2.1)Inside the template wrapping in the .html file the property in square brackets []
+                        ex. <img [src]="'assets/' + selectedUser.avatar"/>
+                    2.2.2)Defining a getter whitin the class in the component .ts file
+                        Declare a get method in the class 
+                            to be binded in the HTML
+                            ex. whitin user.component.ts 
+                            get imagePath()
+                                {
+                                    return 'assets/users/' + this.selectedUser.avatar;
+                                }
+                             and within the .html
+                                [src]="imagePath"
+    
 </Angular>
+
 <vscode>
     Recommended extentions
         Angular Language Service (angular.io)
         Angular Essentials (John Papa)
 </vscode>
--How to start the development server
+*How to start the development server
+    -binding localhost
     #npm start
         If you just installed angular , open a new Powershell
+    -binding IP 
+    #ng serve --host 0.0.0.0
+    we can change the 'start' command in the scrpit contained in package.json
+
 </install>
 </Notes>
 <versioning history>
