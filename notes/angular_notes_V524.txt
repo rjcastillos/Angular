@@ -137,7 +137,8 @@
             ex. imports: [HeaderComponent],
     3) as the imports and bootstrapApplication are inserted in the app.component.ts
         we dont need those lines in main.ts
-        *How to automatically (using ng) generate new components
+		
+*How to automatically add new components (using ng)
     #ng generate component {name} {path}
     #ng g c {name} {path} 
     ex. #ng g c user 
@@ -147,6 +148,9 @@
                 CREATE src/app/user/user.component.spec.ts (601 bytes)
                 CREATE src/app/user/user.component.ts (238 bytes)
                 CREATE src/app/user/user.component.css (0 bytes)
+		#ng g c user --skip-tests 
+			Above command avoids to create tests ({name}.component.spec.ts)
+
 - Dynamic content (lesson 20 and above):
     1)  Define a property inside the component's class:
             To make dynamic text rendering from a Jason file add a property  in the component .ts file as below

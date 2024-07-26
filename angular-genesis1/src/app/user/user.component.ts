@@ -14,16 +14,27 @@ import { Component, Input, Output, EventEmitter} from '@angular/core';
 })
 
 export class UserComponent {
-@Input({ required:true}) id!: string;
-@Input({required:true}) avatar!: string;
-@Input({required:true}) name!: string;
-@Output() select = new EventEmitter( );
+//@Input({ required:true}) id!: string;
+//@Input({required:true}) avatar!: string;
+//@Input({required:true}) name!: string;
+//
+// The three statement above can be replace by the following object
+// chamging the inoking from 
+//  this.avatar to this.user.avatar
+//
+//
+@Input({required: true}) user!: {
+  id: string;
+  avatar: string;
+  name: string;
+};
+@Output() select = new EventEmitter<string>();
 
 get imagePath() {
-  return 'assets/users/' + this.avatar;
+  return 'assets/users/' + this.user.avatar;
 }
 
 onSelectUser (){
-  this.select.emit(this.id);
+  this.select.emit(this.user.id);
 }
 }
