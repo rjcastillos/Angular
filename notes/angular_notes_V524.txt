@@ -101,6 +101,9 @@
 </Windows>
 <Mac>
     sudo npm install -g @angular/cli
+    then 
+    npm install 
+        to install the ng dev environment
 </Mac>
 *How to Create a new project
     position in the desired directory
@@ -190,6 +193,10 @@
     we can change the 'start' command in the scrpit contained in package.json
 
 </install>
+
+<build>
+    ng build --prod--base-href "http/s://{domain}"
+</build>
 
     -As of July 2024 Signals is a fearly new Angular feature, not wide adopted , therefore
     setting properties using "Input" decorators is the common way to accept components "Input".
