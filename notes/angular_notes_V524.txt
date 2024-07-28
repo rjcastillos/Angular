@@ -194,6 +194,10 @@
 
 </install>
 
+<build>
+    ng build --prod--base-href "http/s://{domain}"
+</build>
+
     -As of July 2024 Signals is a fearly new Angular feature, not wide adopted , therefore
     setting properties using "Input" decorators is the common way to accept components "Input".
     The class to import Signals is "input" and the one to work with decorators is "Input".
